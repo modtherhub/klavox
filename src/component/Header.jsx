@@ -1,10 +1,15 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { FiGithub } from "react-icons/fi";
+import { FiGithub, FiMenu, FiX} from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
+import { useState } from 'react';
 
 const Header = () => {
+  // Toggle the menu open/close
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <header className='absolute w-full z-50 transition-all 
     duration-300'>
@@ -122,6 +127,21 @@ const Header = () => {
           Hire Me
         </motion.button>
 
+        {/* Mobile Menu button*/}
+        <div className='md:hidden flex items-center'>
+          <motion.button 
+          whileTap={{scale: 0.7}}
+          onClick={toggleMenu}
+          className='text-gray-300'>
+            {  isOpen ? <FiX className='h-6 w-6'/> : <FiMenu className='h-6 w-6'/>}
+          </motion.button>
+        </div>
+      </div>
+      {/* Mobile Menu*/}
+      <div
+      className='md:hidden overflow-hidden bg-white 
+      dark:'>
+        
       </div>
     </header>
   )
