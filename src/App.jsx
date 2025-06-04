@@ -1,5 +1,6 @@
 import Header from "./component/Header"
 import HeroSrction from "./component/HeroSrction"
+import CustomCursor from "./CustomCursor"
 
 function App() {
  
@@ -8,6 +9,7 @@ function App() {
     <>
       <Header/>
       <HeroSrction/>
+      <CustomCursor/>
     </>
   )
 }
