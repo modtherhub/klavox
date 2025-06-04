@@ -5,6 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { useState } from 'react';
 import { a, div } from 'framer-motion/client';
+import logo from '/home/modther/Project/taqa/src/assets/logo.png'
 
 const Header = () => {
   // Toggle the menu open/close
@@ -40,13 +41,13 @@ const Header = () => {
           bg-gradient-to-r from-gray-500 to-gray-100 
           flex items-center justify-center text-purple-600
           font-bold text-xl mr-3'>
-          M
+          <img src={logo} alt="" />
           </div>
 
           <span className='text-xl font-bold bg-gradient-to-r
           from-gray-400 to-gray-100 bg-clip-text
           text-transparent'>
-          MiladiCode
+          Klavox
           </span>
 
         </motion.div>
